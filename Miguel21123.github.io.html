@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #no-button {
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>NANO... :3 Will you be my Valentine?</h1>
+    <button id="yes-button">Yes</button>
+    <button id="no-button">No</button>
+    <p id="message" style="display: none;"></p>
+    
+    <script>
+      const yesButton = document.querySelector("#yes-button");
+      const noButton = document.querySelector("#no-button");
+      const message = document.querySelector("#message");
+      
+      yesButton.addEventListener("click", function() {
+        message.innerHTML = "YIEEE, LOVE YOU <3 SEE YOU!";
+        message.style.display = "block";
+      });
+      
+      noButton.addEventListener("click", function() {
+        const x = Math.floor(Math.random() * window.innerWidth);
+        const y = Math.floor(Math.random() * window.innerHeight);
+        noButton.style.left = x + "px";
+        noButton.style.top = y + "px";
+      });
+    </script>
+  </body>
+</html>
